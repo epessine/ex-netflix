@@ -1,3 +1,5 @@
+
+// muda o background do header no scroll
 window.onscroll = function(){scrollFunction()};
 
 function scrollFunction() {
@@ -7,3 +9,4 @@ function scrollFunction() {
     document.querySelector(".header-wrapper").style.backgroundColor = "transparent";
   }
 }   
+// muda o background do header no scroll
