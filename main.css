@@ -11,16 +11,18 @@
 
 body {
     margin: auto;
-    width: 95vw;
+    width: 100vw;
     background: var(--preto);
     font-family: 'Baloo Chettan 2';
 }
 
 .header-wrapper {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 5vw 10vh 5vw;
+    position: fixed;
 }
 
 .header-left {
@@ -29,8 +31,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 1em;
-    margin-top: 0%;
+    padding-right: 1em;
+    margin-left: 0;
 }
 
 .header-title.img {
@@ -44,14 +46,129 @@ body {
 
 header nav a {
     text-decoration: none;
-    color: #AAA;
+    color: rgb(238, 238, 238);
     margin-right: 20px;
+    transition: 0.2s;
 }
 
 header nav a:hover {
-    color: #fff;
+    color: rgb(134, 134, 134);
 }
 
 .header-menu-left {
     margin-left: 1vw;
+}
+
+.dropdown-menu {
+    position: relative;
+    /*display: inline-block; */
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.76);
+    min-width: 250px;
+    z-index: 1;
+    text-align: center;
+    left: -100%;
+    border-top: 2px solid white;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-button:hover + .dropdown-content {display: block;}
+
+.dropdown-content:hover {display: block;}
+
+.main-movie {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 44vw;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(img/main-backdrop.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.main-movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    padding-top: 5%;
+
+}
+
+.main-movie-title img {
+    width: 30%;
+}
+
+.main-movie-meta {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.main-movie-sin {
+    width: 50%;
+    font-size: 1.3vw;
+    margin-bottom: 2%;
+}
+
+.button-play {
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    padding: 0.6% 1.5%;
+    font-family: 'Baloo Chettan 2';
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    margin-right: 1%;
+}
+
+.button-play:hover {
+    background: rgb(206, 206, 206);
+}
+
+.button-info {
+    background: rgba(138, 138, 138, 0.281);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.6% 1.5%;
+    font-family: 'Baloo Chettan 2';
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.button-info:hover {
+    background: rgba(138, 138, 138, 0.178);
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .menu-show {
+        display: none;
+    }
+
+
 }
