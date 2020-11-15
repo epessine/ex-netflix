@@ -71,7 +71,7 @@ header nav a:hover {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.76);
     min-width: 250px;
-    z-index: 1;
+    z-index: 9999;
     text-align: center;
     left: -100%;
     border-top: 2px solid white;
@@ -158,27 +158,75 @@ header nav a:hover {
 /* carousel */
 
 .carousel {
-    margin: 0 5%;
-    width: 80vw;
+    display: flex;
+    margin: 1% 5%;
+    width: 90vw;
+    align-items: center;
+    overflow: hidden;
 }
 
-.carousel-wrapper {
+.car1 {
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 180vw;
+    flex-shrink: 0;
+    left: -6vw;
 }
 
 .carousel-item {
-    width: 20vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    transition: 0.3s;
+    margin-left: 1%;
+}
+
+.carousel-item a {
+    width: 100%;
+}
+
+.carousel-item img:hover {
+    filter: opacity(70%);
+    
 }
 
 .carousel-item img {
-    width: 15vw;
     border-radius: 5px;
+    transition: 0.2s;
+    width: 100%;
 }
 
+.carousel-button {
+    color: rgb(238, 238, 238);
+    z-index: 1;
+    font-size: 4vw;
+    cursor: pointer;
+    height: 150%;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 10%;
+}
 
+.carousel-button i {
+    color: rgb(238, 238, 238);
+    transition: 0.3s;
+}
+
+.carousel-button i:hover {
+    color: rgba(138, 138, 138, 0.178);
+}
+
+.carousel-next {
+    position: relative;
+    left: 84vw;
+}
+
+.carousel-previous {
+    visibility: hidden;
+}
 
 
 /* responsividade */
